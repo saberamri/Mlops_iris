@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Docker
+.env
+
+# ML / logs
+mlruns/
+artifacts/
+
+# OS / IDE
+.vscode/
+.DS_Store
+
+# shell
+script_mlops_git.sh
