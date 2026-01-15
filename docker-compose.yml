@@ -33,3 +33,5 @@ services:
 
 volumes:
   model_data:
+  mlflow_data:
+
