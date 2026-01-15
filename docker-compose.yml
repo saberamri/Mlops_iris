@@ -14,7 +14,22 @@ services:
     volumes:
       - model_data:/models
     depends_on:
-      - trainer    
+      - trainer 
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: ds_mlflow
+    command: >
+      sh -c "pip install --no-cache-dir mlflow &&
+             mlflow server
+             --host 0.0.0.0
+             --port 5000
+             --backend-store-uri sqlite:////mlflow/mlflow.db
+             --default-artifact-root /mlflow/artifacts"
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_data:/mlflow   
 
 volumes:
   model_data:
