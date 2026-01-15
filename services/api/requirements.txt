@@ -1,0 +1,10 @@
+#framework web
+fastapi
+
+#serveur qui lance FastAPI
+uvicorn[standard]
+
+scikit-learn
+
+# charger le modèle model.pkl
+joblib
