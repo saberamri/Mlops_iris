@@ -19,15 +19,15 @@ services:
   mlflow:
     image: ghcr.io/mlflow/mlflow:latest
     container_name: ds_mlflow
-    command: >
-      sh -c "pip install --no-cache-dir mlflow &&
-             mlflow server
-             --host 0.0.0.0
-             --port 5000
-             --backend-store-uri sqlite:////mlflow/mlflow.db
-             --default-artifact-root /mlflow/artifacts"
     ports:
       - "5000:5000"
+    command:
+      - mlflow
+      - server
+      - --host=0.0.0.0
+      - --port=5000
+      - --backend-store-uri=sqlite:////mlflow/mlflow.db
+      - --default-artifact-root=/mlflow/artifacts
     volumes:
       - mlflow_data:/mlflow   
 
