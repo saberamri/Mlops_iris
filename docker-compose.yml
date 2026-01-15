@@ -6,5 +6,15 @@ services:
       - model_data:/models
     restart: "no"
 
+  api:
+    build: ./services/api
+    container_name: ds_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - model_data:/models
+    depends_on:
+      - trainer    
+
 volumes:
   model_data:
