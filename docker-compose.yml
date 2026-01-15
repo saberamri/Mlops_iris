@@ -1,0 +1,10 @@
+services:
+  trainer:
+    build: ./services/trainer
+    container_name: ds_trainer
+    volumes:
+      - model_data:/models
+    restart: "no"
+
+volumes:
+  model_data:
