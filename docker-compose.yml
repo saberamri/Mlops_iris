@@ -4,6 +4,11 @@ services:
     container_name: ds_trainer
     volumes:
       - model_data:/models
+    environment:
+      - MLFLOW_TRACKING_URI=http://ds_mlflow:5000
+      - MLFLOW_EXPERIMENT_NAME=iris-demo
+    depends_on:
+      - mlflow
     restart: "no"
 
   api:
