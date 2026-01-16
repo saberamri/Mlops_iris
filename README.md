@@ -32,9 +32,8 @@ Ce projet a pour but de mettre en place une **stack MLOps complète** permettant
 - **volumes Docker** : persistance des données et modèles
 
 
-![Architecture MLOps](docs/architecture.png)
 ---
-
+![alt text](image.png)
 ---
 
 ## 📁 Structure du projet
