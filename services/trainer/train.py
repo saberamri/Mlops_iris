@@ -36,6 +36,10 @@ with mlflow.start_run() as run:
     # Log params/metrics
     mlflow.log_param("n_estimators", n_estimators)
     mlflow.log_metric("accuracy", acc)
+    
+    with open("hello.txt", "w") as f:
+        f.write("hello artifacts")
+    mlflow.log_artifact("hello.txt")
 
     # Log model inside MLflow artifacts
     mlflow.sklearn.log_model(model, artifact_path="model")
