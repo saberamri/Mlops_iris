@@ -39,7 +39,8 @@ with mlflow.start_run() as run:
     
 
     # Log model inside MLflow artifacts
-    mlflow.sklearn.log_model(model, artifact_path="model")
+    mlflow.sklearn.log_model(model, name="model")
+
 
     # Save also to shared volume for the API (like before)
     joblib.dump(model, f"{MODEL_DIR}/model.pkl")
