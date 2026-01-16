@@ -31,6 +31,7 @@ Ce projet a pour but de mettre en place une **stack MLOps complète** permettant
 - **api** : API FastAPI pour servir le modèle
 - **volumes Docker** : persistance des données et modèles
 
+
 ![Architecture MLOps](docs/architecture.png)
 ---
 
