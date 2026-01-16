@@ -33,7 +33,7 @@ services:
       - --port=5000
       - --backend-store-uri=sqlite:////mlflow/mlflow.db
       - --default-artifact-root=/mlflow/artifacts
-      - --gunicorn-opts=--forwarded-allow-ips=*
+      - --allowed-hosts=localhost,127.0.0.1,ds_mlflow,mlflow
     volumes:
       - mlflow_data:/mlflow   
 
