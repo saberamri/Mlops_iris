@@ -1,6 +1,5 @@
-mlflow==2.14.3
+mlflow==3.8.1
 boto3
 scikit-learn
 pandas
 numpy
-mlflow
