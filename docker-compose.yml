@@ -39,6 +39,7 @@ services:
 
     volumes:
       - mlflow_data:/mlflow   
+      - mlflow_artifacts:/mlflow/artifacts
 
 volumes:
   model_data:
